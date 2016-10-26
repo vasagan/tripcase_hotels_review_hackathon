@@ -13,9 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import include, url
 from django.contrib import admin
 
+from wifi_test.views import *
+from wifi_test.admin import admin_site
+
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    # Examples:
+    # url(r'^$', 'core.views.home', name='home'),
+    # url(r'^blog/', include('blog.urls')),
+    url(r'^admin', include(admin_site.urls)),
+    url(r'wifi', save_wifi_ratings),
+    url(r'^api-auth', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^tripcase', include('tripcase_review.urls')),
+    url(r'^', show_home)
 ]

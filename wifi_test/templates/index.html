@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form action="/" method="POST">
+        {% csrf_token %}
+        <iframe src="http://www.tripcase.com" height="100%" width="100%" border="none" frameborder="0"></iframe>
+    </form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2> Response from api.hotelwifitest.com is shown below. If the request is successful, then Sabre Hotels Database is automatically updated </h2>
+
+    <table border="1">
+        <tr text-align="center"><td>{{ wifi_details.id }}</td>
+         <td>{{ wifi_details.name }}</td>
+         <td>{{ wifi_details.body }}</td></tr>
+    </table>
+
+
+
+{% endblock %}

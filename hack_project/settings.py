@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'wifi_test',
+    'rest_framework',
+    'tripcase_review'
 ]
 
 MIDDLEWARE = [
@@ -118,3 +121,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+WIFI_KEY = ''
