@@ -25,7 +25,7 @@ SECRET_KEY = '6e_&44ux%3(=akdv#-b6kw7imn#5qa-i5!5-h9#^6!e-gb9h2s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.sepallabs.com']
 
 
 # Application definition
