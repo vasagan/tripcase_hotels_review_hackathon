@@ -6,12 +6,8 @@ from django.utils import timezone
 
 
 class tripcase_review(models.Model):
-    property_id = models.IntegerField(unique=True)
+    property_id = models.IntegerField()
     star_rating = models.IntegerField()
     guest_review = models.TextField()
     guest_name = models.CharField(max_length=100)
     device_type = models.CharField(max_length=100)
-
-
-    def __str__(self):
-        return self.property_id
