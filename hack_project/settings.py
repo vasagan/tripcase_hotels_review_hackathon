@@ -126,7 +126,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-STATIC_ROOT = '/home/ubuntu/hack_project/static_web/'
+STATIC_ROOT = '/home/ubuntu/tts_hotels/static_web/'
 STATIC_URL = '/static/'
 
 WIFI_KEY = ''
