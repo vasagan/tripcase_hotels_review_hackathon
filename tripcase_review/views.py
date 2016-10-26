@@ -76,7 +76,7 @@ def property_review(request, property_number):
     if hotel_wifi_strength.objects.filter(property_id=property_number).exists():
         prop = hotel_wifi_strength.objects.get(property_id=property_number)
         wifi_details = { 'property_id': prop.property_id, 'ean id': prop.ean_id, 'tripadvisor id': prop.tripadvisor_id, 'property name': prop.name, 'address': prop.full_address, 'url': prop.url, 'wifi speed': prop.expected_speed, 'wifi rank': prop.percentile_rank }
-        wifi_details =  {'wifi_rank':wifi_details}, {'reviews': review_list }
+        wifi_details =  { 'wifi_rank': wifi_details, 'reviews': review_list }
         return Response(wifi_details)
     review_list = {'reviews': review_list}
     return Response(review_list)
